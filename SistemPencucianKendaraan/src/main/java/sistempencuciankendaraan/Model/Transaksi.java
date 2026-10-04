@@ -57,9 +57,5 @@ public class Transaksi {
         System.out.println("Nama Pelanggan : " + pelanggan.getNama());
         System.out.println("Nomor Telepon : " + pelanggan.getNoTelepon());
         kendaraan.tampilkanData();
-        
-        System.out.println("Kode Layanan : " + layanan.getKodeLayanan());
-        System.out.println("Layanan : " + layanan.getNamaLayanan());
-        System.out.println("Harga Rp : " + layanan.getHarga());
     }
 }

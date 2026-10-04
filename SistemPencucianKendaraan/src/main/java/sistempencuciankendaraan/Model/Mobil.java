@@ -5,6 +5,7 @@
 package sistempencuciankendaraan.Model;
 
 import sistempencuciankendaraan.Model.Kendaraan;
+import sistempencuciankendaraan.Model.Layanan;
 /**
  *
  * @author Lenovo GK
@@ -13,16 +14,18 @@ public class Mobil extends Kendaraan{
     
     private int jumlahRoda;
     
-    public Mobil(String noPlat, String merk, String warna, int jumlahRoda){
-        super(noPlat, merk, warna);
+    public Mobil(String noPlat, String merk, String warna, int jumlahRoda, Layanan layanan){
+        super(noPlat, merk, warna, layanan);
         this.jumlahRoda = jumlahRoda;
-    }
+    } 
     @Override
     public void tampilkanData(){
         super.tampilkanData();
    
 System.out.println("Jenis Kendaraan : Mobil");
-
 System.out.println("Jumlah Roda : " + jumlahRoda);
+System.out.println("Kode Layanan : " + getLayanan().getKodeLayanan());
+System.out.println("Layanan : " + getLayanan().getNamaLayanan());
+System.out.println("Harga Rp : " + getLayanan().getHarga());
     }
 }

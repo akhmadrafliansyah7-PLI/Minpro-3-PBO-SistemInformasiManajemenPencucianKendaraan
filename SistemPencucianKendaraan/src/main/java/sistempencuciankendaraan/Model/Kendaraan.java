@@ -4,6 +4,7 @@
  */
 package sistempencuciankendaraan.Model;
 
+import sistempencuciankendaraan.Model.Layanan;
 /**
  *
  * @author Lenovo GK
@@ -13,11 +14,13 @@ public class Kendaraan {
     private String noPlat;
     private String merk;
     private String warna;
+    private Layanan layanan;
     
-    public Kendaraan(String noPlat, String merk, String warna){
+    public Kendaraan(String noPlat, String merk, String warna, Layanan layanan){
         this.noPlat = noPlat;
         this.merk = merk;
         this.warna = warna;
+        this.layanan = layanan;
     }
     public String getNoPlat(){
         return noPlat;
@@ -36,6 +39,12 @@ public class Kendaraan {
     }
     public void setWarna(String warna) {
         this.warna = warna;
+    }
+    public Layanan getLayanan(){
+        return layanan;
+    }
+    public void setLayanan(Layanan layanan) {
+        this.layanan = layanan;
     }
     public void tampilkanData(){
         System.out.println("No Plat : " + noPlat);

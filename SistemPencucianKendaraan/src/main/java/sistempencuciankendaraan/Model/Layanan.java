@@ -4,6 +4,7 @@
  */
 package sistempencuciankendaraan.Model;
 
+import sistempencuciankendaraan.Model.Layanan;
 /**
  *
  * @author Lenovo GK

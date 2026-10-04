@@ -5,7 +5,7 @@
 package sistempencuciankendaraan.Model;
 
 import sistempencuciankendaraan.Model.Kendaraan;
-
+import sistempencuciankendaraan.Model.Layanan;
 /**
  *
  * @author Lenovo GK
@@ -14,8 +14,8 @@ public class Motor extends Kendaraan{
     
     private int cc;
     
-    public Motor(String noPlat, String merk, String warna, int cc){
-        super(noPlat, merk, warna);
+    public Motor(String noPlat, String merk, String warna, int cc, Layanan layanan){
+        super(noPlat, merk, warna, layanan);
         this.cc = cc;
     }
     
@@ -24,7 +24,9 @@ public class Motor extends Kendaraan{
         super.tampilkanData();
    
 System.out.println("Jenis Kendaraan : Motor");
-
 System.out.println("CC : " + cc);
+System.out.println("Kode Layanan : " + getLayanan().getKodeLayanan());
+System.out.println("Layanan : " + getLayanan().getNamaLayanan());
+System.out.println("Harga Rp : " + getLayanan().getHarga());
     }
 }
