@@ -9,7 +9,7 @@ import sistempencuciankendaraan.Model.Layanan;
  *
  * @author Lenovo GK
  */
-public class Kendaraan {
+public abstract class Kendaraan {
     
     protected String noPlat;
     protected String merk;
@@ -46,12 +46,11 @@ public class Kendaraan {
     public void setLayanan(Layanan layanan) {
         this.layanan = layanan;
     }
-    public void tampilkanData(){
+    protected void tampilkanDataDasar(){
         System.out.println("No Plat : " + noPlat);
-   
-System.out.println("Merk : " + merk);
-
-System.out.println("Warna : " + warna);
+        System.out.println("Merk : " + merk);
+        System.out.println("Warna : " + warna);
     }
+    public abstract void tampilkanData();
 }
 

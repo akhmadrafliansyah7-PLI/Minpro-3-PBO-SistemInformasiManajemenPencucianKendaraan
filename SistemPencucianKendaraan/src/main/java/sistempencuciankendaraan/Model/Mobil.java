@@ -8,7 +8,7 @@ package sistempencuciankendaraan.Model;
  *
  * @author Lenovo GK
  */
-public class Mobil extends Kendaraan{
+public class Mobil extends Kendaraan implements BisaDicuci{
     
     private int jumlahRoda;
     
@@ -17,10 +17,14 @@ public class Mobil extends Kendaraan{
         this.jumlahRoda = jumlahRoda;
     } 
     @Override
+    public void cuci(){
+        System.out.println("Mobil sedang dicuci");
+        
+    }
+    @Override
     public void tampilkanData(){
-        super.tampilkanData();
+        super.tampilkanDataDasar();
    
-System.out.println("Jenis Kendaraan : Mobil");
 System.out.println("Jumlah Roda : " + jumlahRoda);
 System.out.println("Kode Layanan : " + getLayanan().getKodeLayanan());
 System.out.println("Layanan : " + getLayanan().getNamaLayanan());

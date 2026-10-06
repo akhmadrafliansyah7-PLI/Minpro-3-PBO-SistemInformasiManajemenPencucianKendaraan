@@ -8,7 +8,7 @@ package sistempencuciankendaraan.Model;
  *
  * @author Lenovo GK
  */
-public class Motor extends Kendaraan{
+public class Motor extends Kendaraan implements BisaDicuci{
     
     private int cc;
     
@@ -16,10 +16,14 @@ public class Motor extends Kendaraan{
         super(noPlat, merk, warna, layanan);
         this.cc = cc;
     }
-    
+    @Override
+    public void cuci(){
+        System.out.println("Motor sedang dicuci");
+                
+    }
     @Override
     public void tampilkanData(){
-        super.tampilkanData();
+        super.tampilkanDataDasar();
    
 System.out.println("Jenis Kendaraan : Motor");
 System.out.println("CC : " + cc);
