@@ -18,8 +18,10 @@ public class Motor extends Kendaraan implements BisaDicuci{
     }
     @Override
     public void cuci(){
-        System.out.println("Motor sedang dicuci");
-                
+        System.out.println("Motor sedang dicuci");            
+    }
+    @Override public BisaDicuci getBisaDicuci(){
+        return this;
     }
     @Override
     public void tampilkanData(){

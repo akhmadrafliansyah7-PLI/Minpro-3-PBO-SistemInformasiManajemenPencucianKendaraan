@@ -23,7 +23,7 @@ public class Transaksi {
     
     public Transaksi(Pelanggan pelanggan, Kendaraan kendaraan, Layanan layanan){
         counter++;
-        this.idTransaksi = String.format("LY%03d", counter);
+        this.idTransaksi = String.format("TR%03d", counter);
         this.pelanggan = pelanggan;
         this.kendaraan = kendaraan;
         this.layanan = layanan;

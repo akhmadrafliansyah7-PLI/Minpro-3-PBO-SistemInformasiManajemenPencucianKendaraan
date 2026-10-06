@@ -52,5 +52,7 @@ public abstract class Kendaraan {
         System.out.println("Warna : " + warna);
     }
     public abstract void tampilkanData();
+    
+    public abstract BisaDicuci getBisaDicuci();
 }
 

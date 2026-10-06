@@ -23,10 +23,11 @@ System.out.println("=================================");
             System.out.println("2. Tampilkan Data Pencucian");
             System.out.println("3. Ubah Data Pencucian");
             System.out.println("4. Hapus Data Pencucian");
-            System.out.println("5. Keluar");
+            System.out.println("5. Proses Pencucian");
+            System.out.println("6. Keluar");
             
 System.out.println("=================================");
-            System.out.print("Pilih menu: ");
+            System.out.print("Pilih menu (1-6): ");
     }   
     public int inputMenu(){
         while (!input.hasNextInt()){

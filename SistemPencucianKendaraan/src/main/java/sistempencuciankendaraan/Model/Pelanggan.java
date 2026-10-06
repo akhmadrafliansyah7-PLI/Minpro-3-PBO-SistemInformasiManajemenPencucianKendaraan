@@ -23,6 +23,13 @@ public class Pelanggan {
         this.noTelepon = noTelepon;
     }
     
+    public Pelanggan(String nama){
+        counter++;
+        this.idPelanggan = String.format("PL%03d", counter);
+        this.nama = nama;
+        this.noTelepon = "-";
+    
+    }
     public String getIdPelanggan(){
         return idPelanggan;
     }

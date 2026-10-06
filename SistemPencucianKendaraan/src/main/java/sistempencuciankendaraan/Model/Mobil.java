@@ -18,8 +18,10 @@ public class Mobil extends Kendaraan implements BisaDicuci{
     } 
     @Override
     public void cuci(){
-        System.out.println("Mobil sedang dicuci");
-        
+        System.out.println("Mobil sedang dicuci"); 
+    }
+    @Override public BisaDicuci getBisaDicuci(){
+        return this;
     }
     @Override
     public void tampilkanData(){

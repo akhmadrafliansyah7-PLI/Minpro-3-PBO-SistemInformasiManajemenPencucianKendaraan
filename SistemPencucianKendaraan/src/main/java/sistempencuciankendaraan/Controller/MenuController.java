@@ -6,6 +6,7 @@ package sistempencuciankendaraan.Controller;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import sistempencuciankendaraan.Model.BisaDicuci;
 import sistempencuciankendaraan.Model.Kendaraan;
 import sistempencuciankendaraan.Model.Layanan;
 import sistempencuciankendaraan.Model.Mobil;
@@ -80,7 +81,11 @@ daftarTransaksi.add(transaksi);
                     hapusData();
                     break;
                     
-                case 5:
+                case 5:  
+                    prosesPencucian();
+                    break;      
+                    
+                case 6:
 System.out.println("Program Selesai");
                     break;
                     
@@ -89,7 +94,7 @@ System.out.println("Program Selesai");
 System.out.println("Pilihan Menu Tidak Tersedia");
                 
             }
-        }while (pilihan !=5);
+        }while (pilihan !=6);
     }
 public void tambahData(){
         
@@ -113,11 +118,17 @@ public void tambahData(){
         System.out.print("Nomor Telepon: ");
         noTelepon = input.nextLine();
        
-        if (!noTelepon.matches("\\d+")){
+        if (noTelepon.isEmpty() || noTelepon.matches("\\d+")){
             break;
         } else {
             System.out.println("Nomor Telepon hanya boleh berisi angka!");
         }
+    }
+    Pelanggan pelanggan;
+    if (noTelepon.isEmpty()){
+        pelanggan = new Pelanggan(nama);
+    }else{
+        pelanggan = new Pelanggan(nama, noTelepon);
     }
 
     System.out.print("Nomor Plat: ");
@@ -197,7 +208,6 @@ public void tambahData(){
         }
         kendaraan = new Mobil(noPlat, merk, warna, jumlahRoda, layanan);
        
-        Pelanggan pelanggan = new Pelanggan(nama, noTelepon);
         Transaksi transaksi = new Transaksi(pelanggan, kendaraan, layanan);
 
         daftarTransaksi.add(transaksi);
@@ -253,7 +263,6 @@ public void tambahData(){
             }
             kendaraan = new Motor(noPlat, merk, warna, cc, layanan);
             
-            Pelanggan pelanggan = new Pelanggan(nama, noTelepon);
             Transaksi transaksi = new Transaksi(pelanggan, kendaraan, layanan);
 
             daftarTransaksi.add(transaksi);
@@ -293,8 +302,26 @@ public void ubahData(){
                         System.out.print("Nama Pelanggan Baru: ");
                         String nama = input.nextLine();
 
-                        System.out.print("Nomor Telepon Baru: ");
-                        String noTelepon = input.nextLine();
+                        String noTelepon;
+    
+                        while (true){
+                            System.out.print("Nomor Telepon Baru: ");
+                            noTelepon = input.nextLine();
+
+                            if (noTelepon.isEmpty() || noTelepon.matches("\\d+")){
+                                break;
+                            } else {
+                                System.out.println("Nomor Telepon hanya boleh berisi angka!");
+                            }
+                        }
+                        
+                        Pelanggan pelanggan;
+                        
+                        if (noTelepon.isEmpty()){
+                            pelanggan = new Pelanggan(nama);
+                        }else{
+                            pelanggan = new Pelanggan(nama, noTelepon);
+                        }
 
 transaksi.getPelanggan().setNama(nama);
 transaksi.getPelanggan().setNoTelepon(noTelepon);
@@ -441,6 +468,57 @@ transaksi.getPelanggan().setNoTelepon(noTelepon);
             }
             System.out.println("ID Transaksi Tidak Ditemukan.");
         }
+
+public void prosesPencucian(){
+
+    System.out.println("\n=== Proses Pencucian ===");
+
+    System.out.println("Masukan ID Transaksi: ");
+    String idTransaksi = input.nextLine();
+
+    for (Transaksi transaksi : daftarTransaksi){
+
+        if(transaksi.getIdTransaksi().equals(idTransaksi)) {
+            
+System.out.println("\n--- Data Pencucian ---");
+System.out.println("---------------------------");
+            
+            Kendaraan kendaraan = transaksi.getKendaraan();
+            
+            kendaraan.tampilkanData();
+            
+System.out.println("---------------------------");
+            
+            String pilihan;
+            
+            while(true){
+                System.out.print("Mulai Pencucian (ya/tidak): ");
+                pilihan = input.nextLine();
+                
+                if (pilihan.equalsIgnoreCase("ya") || pilihan.equalsIgnoreCase("tidak")){
+                    break;
+                }
+                System.out.println("Input Tidak Valid, Silahkan Masukkan ya atau tidak.");
+                        
+            }
+            if (pilihan.equalsIgnoreCase("ya")){
+                
+                BisaDicuci bisaDicuci = kendaraan.getBisaDicuci();
+                
+                bisaDicuci.cuci();
+                
+                System.out.println("Mohon Tunggu Proses Pencucian Berlangsung.");
+                
+                System.out.println("Pencucian Selesai");
+                
+            }else{
+                System.out.println("Proses Pencucian Dibatalkan");
+            }
+            return;   
+        }     
+    }
+    System.out.println("ID Transaksi Tidak Ditemukan.");
+}
 
 public void hapusData(){
 
