@@ -11,10 +11,10 @@ import sistempencuciankendaraan.Model.Layanan;
  */
 public class Kendaraan {
     
-    private String noPlat;
-    private String merk;
-    private String warna;
-    private Layanan layanan;
+    protected String noPlat;
+    protected String merk;
+    protected String warna;
+    protected Layanan layanan;
     
     public Kendaraan(String noPlat, String merk, String warna, Layanan layanan){
         this.noPlat = noPlat;

@@ -29,9 +29,8 @@ public class MenuController {
     }
     public void dataDummy(){
         Pelanggan pelanggan = new Pelanggan(
-            "PL001",
             "Rapli",
-            "089690744311"
+            "08969074431"
         );
         
         Layanan layanan = new Layanan(
@@ -49,7 +48,6 @@ public class MenuController {
         );
        
         Transaksi transaksi = new Transaksi(
-            "TL001",
             pelanggan,
             kendaraan,
             layanan
@@ -97,35 +95,6 @@ public void tambahData(){
         
     System.out.println("\n=== Tambah Data Pencucian ===");
 
-    String idTransaksi;
-
-    while (true){
-        System.out.print("ID Transaksi : ");
-        idTransaksi = input.nextLine();
-
-        if (idTransaksi.isEmpty()){
-            System.out.println("ID Transaksi Tidak Boleh Kosong!");
-            continue;
-        }
-        boolean sudahAda = false;
-
-        for (Transaksi transaksi : daftarTransaksi){
-            if (transaksi.getIdTransaksi().equalsIgnoreCase(idTransaksi)) {
-                sudahAda = true;
-                break;
-            }
-        }
-
-        if (sudahAda){
-            System.out.println("ID Transaksi sudah digunakan!");
-        } else {
-            break;
-        }
-    }
-
-    System.out.print("ID Pelanggan: ");
-    String idPelanggan = input.nextLine();
-
     String nama;
     while (true){
         System.out.print("Nama Pelanggan: ");
@@ -139,14 +108,15 @@ public void tambahData(){
     }
 
     String noTelepon;
+    
     while (true){
         System.out.print("Nomor Telepon: ");
         noTelepon = input.nextLine();
-
-        if (noTelepon.isEmpty()){
-            System.out.println("Nomor Telepon Tidak Boleh Kosong!");
-        } else {
+       
+        if (!noTelepon.matches("\\d+")){
             break;
+        } else {
+            System.out.println("Nomor Telepon hanya boleh berisi angka!");
         }
     }
 
@@ -227,8 +197,8 @@ public void tambahData(){
         }
         kendaraan = new Mobil(noPlat, merk, warna, jumlahRoda, layanan);
        
-        Pelanggan pelanggan = new Pelanggan(idPelanggan, nama, noTelepon);
-        Transaksi transaksi = new Transaksi(idTransaksi, pelanggan, kendaraan, layanan);
+        Pelanggan pelanggan = new Pelanggan(nama, noTelepon);
+        Transaksi transaksi = new Transaksi(pelanggan, kendaraan, layanan);
 
         daftarTransaksi.add(transaksi);
 
@@ -283,8 +253,8 @@ public void tambahData(){
             }
             kendaraan = new Motor(noPlat, merk, warna, cc, layanan);
             
-            Pelanggan pelanggan = new Pelanggan(idPelanggan, nama, noTelepon);
-            Transaksi transaksi = new Transaksi(idTransaksi, pelanggan, kendaraan, layanan);
+            Pelanggan pelanggan = new Pelanggan(nama, noTelepon);
+            Transaksi transaksi = new Transaksi(pelanggan, kendaraan, layanan);
 
             daftarTransaksi.add(transaksi);
 

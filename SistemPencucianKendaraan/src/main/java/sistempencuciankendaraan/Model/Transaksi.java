@@ -14,13 +14,16 @@ import sistempencuciankendaraan.Model.Kendaraan;
  */
 public class Transaksi {
     
-    private String idTransaksi;
+    private static int counter = 0;
+    
+    private final String idTransaksi;
     private Pelanggan pelanggan;
     private Kendaraan kendaraan;
     private Layanan layanan;
     
-    public Transaksi(String idTransaksi, Pelanggan pelanggan, Kendaraan kendaraan, Layanan layanan){
-        this.idTransaksi = idTransaksi;
+    public Transaksi(Pelanggan pelanggan, Kendaraan kendaraan, Layanan layanan){
+        counter++;
+        this.idTransaksi = String.format("LY%03d", counter);
         this.pelanggan = pelanggan;
         this.kendaraan = kendaraan;
         this.layanan = layanan;
@@ -28,9 +31,6 @@ public class Transaksi {
     
     public String getIdTransaksi(){
         return idTransaksi;
-    }
-    public void setIdTransaksi(String idTransaksi) {
-        this.idTransaksi = idTransaksi;
     }
     public Pelanggan getPelanggan(){
         return pelanggan;

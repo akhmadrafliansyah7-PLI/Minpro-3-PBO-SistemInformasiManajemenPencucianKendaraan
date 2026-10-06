@@ -11,9 +11,9 @@ import sistempencuciankendaraan.Model.Layanan;
  */
 public class Layanan {
     
-    private String kodeLayanan;
+    private final String kodeLayanan;
     private String namaLayanan;
-    private double harga;
+    private final double harga;
     
     public Layanan(String kodeLayanan, String namaLayanan, double harga){
         this.kodeLayanan = kodeLayanan;
@@ -24,9 +24,7 @@ public class Layanan {
     public String getKodeLayanan(){
         return kodeLayanan;
     }
-    public void setKodeLayanan(String kodeLayanan) {
-        this.kodeLayanan = kodeLayanan;
-    }
+    
     public String getNamaLayanan(){
         return namaLayanan;
     }
@@ -36,7 +34,5 @@ public class Layanan {
     public double getHarga(){
         return harga;
     }
-    public void setHarga(double harga) {
-        this.harga = harga;
-    }
+
 }

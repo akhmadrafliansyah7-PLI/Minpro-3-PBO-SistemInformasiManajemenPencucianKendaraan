@@ -10,21 +10,21 @@ package sistempencuciankendaraan.Model;
  */
 public class Pelanggan {
     
-    private String idPelanggan;
+    private static int counter = 0;
+    
+    private final String idPelanggan;
     private String nama;
     private String noTelepon;
     
-    public Pelanggan(String idPelanggan, String nama, String noTelepon){
-        this.idPelanggan = idPelanggan;
+    public Pelanggan(String nama, String noTelepon){
+        counter++;
+        this.idPelanggan = String.format("PL%03d", counter);
         this.nama = nama;
         this.noTelepon = noTelepon;
     }
     
     public String getIdPelanggan(){
         return idPelanggan;
-    }
-    public void setIdPelanggan(String idPelanggan) {
-        this.idPelanggan = idPelanggan;
     }
     public String getNama(){
         return nama;
