@@ -38,7 +38,19 @@ tampilan dan input, sedangkan Controller untuk mengatur proses dan alur program.
 Program dimulai dengan menampilkan menu utama yang berisi beberapa pilihan, yaitu tambah data, tampilkan data, ubah data, hapus data, 
 proses pencucisn, dan keluar dari program. Pengguna dapat memilih salah satu menu dengan memasukkan angka sesuai pilihan yang tersedia.
 
-![Uploading image.png…]()
+<img width="269" height="193" alt="Screenshot 2026-10-07 094153" src="https://github.com/user-attachments/assets/627f3b57-01bc-4bc9-b9fd-38e43b2b39c7" />
 
 1. Tambah Data Pencucian
    
+   Pada menu **Tambah Data Pencucian**, pengguna memilih menu 1, yaitu Tambah Data Pencucian. Pengguna kemudian memasukkan nama pelanggan, nomor     telepon, nomor plat, merk, dan warna kendaraan. Setelah itu, pengguna memilih jenis kendaraan, yaitu mobil atau motor. Pada contoh tersebut       dipilih mobil, sehingga pengguna memasukkan jumlah roda sebanyak 4. Selanjutnya, pengguna memilih layanan pencucian, yaitu cuci reguler atau      cuci premium; pada contoh dipilih Cuci Premium Mobil dengan harga Rp75.000. Setelah seluruh data dan layanan dipilih, sistem membuat data         transaksi dan menampilkan pesan “Data Pencucian Berhasil Ditambahkan!”, yang menandakan data berhasil disimpan ke dalam sistem.
+   
+  <img width="265" height="562" alt="Screenshot 2026-10-07 095248" src="https://github.com/user-attachments/assets/b1a79b70-dd55-4efc-8c82 1bea664cf003" />
+
+2. Tampilkan Data Pencucian
+
+   Pada menu **Tampilkan Data Pencucian**, sistem menampilkan seluruh data transaksi yang sebelumnya telah tersimpan. Setiap transaksi               ditampilkan secara lengkap, mulai dari ID transaksi, ID pelanggan, nama dan nomor telepon pelanggan, nomor plat, merk dan warna kendaraan,        jumlah roda, hingga kode, nama, dan harga layanan pencucian.
+
+   <img width="260" height="629" alt="Screenshot 2026-10-07 095845" src="https://github.com/user-attachments/assets/cf9e9c59-8135-4341-b065-08d7ca653dae" />
+
+
+
