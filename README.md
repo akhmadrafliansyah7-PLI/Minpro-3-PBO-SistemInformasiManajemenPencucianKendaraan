@@ -44,7 +44,7 @@ proses pencucisn, dan keluar dari program. Pengguna dapat memilih salah satu men
    
    Pada menu **Tambah Data Pencucian**, pengguna memilih menu 1, yaitu Tambah Data Pencucian. Pengguna kemudian memasukkan nama pelanggan, nomor     telepon, nomor plat, merk, dan warna kendaraan. Setelah itu, pengguna memilih jenis kendaraan, yaitu mobil atau motor. Pada contoh tersebut       dipilih mobil, sehingga pengguna memasukkan jumlah roda sebanyak 4. Selanjutnya, pengguna memilih layanan pencucian, yaitu cuci reguler atau      cuci premium; pada contoh dipilih Cuci Premium Mobil dengan harga Rp75.000. Setelah seluruh data dan layanan dipilih, sistem membuat data         transaksi dan menampilkan pesan “Data Pencucian Berhasil Ditambahkan!”, yang menandakan data berhasil disimpan ke dalam sistem.
    
-    <img width="265" height="562" alt="Screenshot 2026-10-07 095248" src="https://github.com/user-attachments/assets/d63e87a1-c2bd-4ab0-bf3b a4cdce8f9f4c" />
+    <img width="265" height="562" alt="Screenshot 2026-10-07 095248" src="https://github.com/user-attachments/assets/d63e87a1-c2bd-4ab0-bf3ba4cdce8f9f4c" />
 
 
 2. Tampilkan Data Pencucian
@@ -88,6 +88,7 @@ penerapan encapsulation terdapat pada class Pelanggan, yaitu dengan menggunakan 
 
 <img width="306" height="58" alt="Screenshot 2026-10-07 102305" src="https://github.com/user-attachments/assets/73cbf6c9-c8bf-490b-b435-9fc686896415" />
 
+
 <img width="411" height="301" alt="Screenshot 2026-10-07 102323" src="https://github.com/user-attachments/assets/f22e24ae-f47e-4f8a-b7b2-5bd4e5d008b7" />
 
 # Penerapan Inheritance
@@ -95,6 +96,7 @@ penerapan encapsulation terdapat pada class Pelanggan, yaitu dengan menggunakan 
 Penerapan inheritance terdapat pada class Mobil dan Motor yang mewarisi class Kendaraan menggunakan keyword extends. Dengan inheritance, atribut dan method yang terdapat pada class Kendaraan dapat digunakan oleh class turunannya.
 
 <img width="766" height="147" alt="Screenshot 2026-10-07 102520" src="https://github.com/user-attachments/assets/c56fd611-1ca2-4d42-9a40-147575bca1f3" />
+
 
 <img width="719" height="147" alt="Screenshot 2026-10-07 102530" src="https://github.com/user-attachments/assets/06827478-2de0-48b7-9468-8cfcf8660661" />
 
@@ -104,7 +106,9 @@ Penerapan polymorphism terdapat pada method tampilkanData() yang dioverride oleh
 
 <img width="388" height="90" alt="Screenshot 2026-10-07 102947" src="https://github.com/user-attachments/assets/fd6f3997-5b18-4ed2-8c22-8674447b0b8f" />
 
+
 <img width="593" height="182" alt="Screenshot 2026-10-07 103022" src="https://github.com/user-attachments/assets/a278f2fb-6259-4ee9-82ad-743c0f6b51af" />
+
 
 <img width="613" height="204" alt="Screenshot 2026-10-07 103032" src="https://github.com/user-attachments/assets/fecc5122-927d-49a1-a25a-37dcf1cf38fc" />
 
@@ -114,6 +118,7 @@ Abstraction diterapkan melalui class Kendaraan yang menyediakan atribut dan meth
 
 <img width="348" height="113" alt="Screenshot 2026-10-07 103453" src="https://github.com/user-attachments/assets/a8174b1d-bb76-4322-8062-6fcf6aa6d5ce" />
 
+
 <img width="346" height="16" alt="Screenshot 2026-10-07 103501" src="https://github.com/user-attachments/assets/2857cbb5-1fb5-4bf9-ad1d-fca79ff87e25" />
 
 # Penerapan Nilai Tambah - Interface
@@ -121,5 +126,6 @@ Abstraction diterapkan melalui class Kendaraan yang menyediakan atribut dan meth
 Interface BisaDicuci diterapkan sebagai bentuk abstraction yang mendefinisikan kemampuan atau method yang harus dimiliki oleh objek yang dapat dicuci. Interface hanya menentukan method yang harus tersedia, sedangkan implementasi prosesnya dilakukan oleh class yang menggunakan interface tersebut, seperti Mobil atau Motor.
 
 <img width="258" height="68" alt="Screenshot 2026-10-07 103728" src="https://github.com/user-attachments/assets/36fb26aa-5345-4c86-b593-bbd3a1a19b1b" />
+
 
 <img width="389" height="71" alt="Screenshot 2026-10-07 103854" src="https://github.com/user-attachments/assets/5deab481-4f68-40eb-baed-3121f889cc18" />
