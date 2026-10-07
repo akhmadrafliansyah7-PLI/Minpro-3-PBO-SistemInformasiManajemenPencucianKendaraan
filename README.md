@@ -44,13 +44,82 @@ proses pencucisn, dan keluar dari program. Pengguna dapat memilih salah satu men
    
    Pada menu **Tambah Data Pencucian**, pengguna memilih menu 1, yaitu Tambah Data Pencucian. Pengguna kemudian memasukkan nama pelanggan, nomor     telepon, nomor plat, merk, dan warna kendaraan. Setelah itu, pengguna memilih jenis kendaraan, yaitu mobil atau motor. Pada contoh tersebut       dipilih mobil, sehingga pengguna memasukkan jumlah roda sebanyak 4. Selanjutnya, pengguna memilih layanan pencucian, yaitu cuci reguler atau      cuci premium; pada contoh dipilih Cuci Premium Mobil dengan harga Rp75.000. Setelah seluruh data dan layanan dipilih, sistem membuat data         transaksi dan menampilkan pesan “Data Pencucian Berhasil Ditambahkan!”, yang menandakan data berhasil disimpan ke dalam sistem.
    
-  <img width="265" height="562" alt="Screenshot 2026-10-07 095248" src="https://github.com/user-attachments/assets/b1a79b70-dd55-4efc-8c82 1bea664cf003" />
+  <img width="265" height="562" alt="Screenshot 2026-10-07 095248" src="https://github.com/user-attachments/assets/d63e87a1-c2bd-4ab0-bf3b-a4cdce8f9f4c" />
+
 
 2. Tampilkan Data Pencucian
 
-   Pada menu **Tampilkan Data Pencucian**, sistem menampilkan seluruh data transaksi yang sebelumnya telah tersimpan. Setiap transaksi               ditampilkan secara lengkap, mulai dari ID transaksi, ID pelanggan, nama dan nomor telepon pelanggan, nomor plat, merk dan warna kendaraan,        jumlah roda, hingga kode, nama, dan harga layanan pencucian.
+   Pada menu **Tampilkan Data Pencucian**, sistem akan memeriksa apakah terdapat data transaksi di dalam `ArrayList`. Jika belum terdapat data,
+   sistem akan menampilkan informasi bahwa belum ada data pencucian. Jika terdapat data, sistem menggunakan perulangan untuk mengambil setiap
+   transaksi dan menampilkan informasi transaksi, pelanggan, kendaraan, serta layanan yang dipilih.
 
    <img width="260" height="629" alt="Screenshot 2026-10-07 095845" src="https://github.com/user-attachments/assets/cf9e9c59-8135-4341-b065-08d7ca653dae" />
 
+3. Ubah Data Pencucian
 
+   Pada menu **Ubah Data Pencucian**, pengguna dapat memperbarui data transaksi yang sudah tersimpan dengan memasukkan ID transaksi yang ingin       diubah. Data yang dapat diperbarui meliputi informasi pelanggan, kendaraan, jenis kendaraan, serta layanan pencucian. Setelah seluruh data        baru dimasukkan, sistem akan memperbarui transaksi dan menampilkan pemberitahuan bahwa data berhasil diubah.
 
+  <img width="260" height="629" alt="Screenshot 2026-10-07 095845" src="https://github.com/user-attachments/assets/13151e38-e46b-4362-adf0-ab2a071589b0" />
+
+4. Hapus Data Pencucian
+
+   Pada menu **Hapus Data Pencucian**, pengguna memasukkan ID transaksi yang ingin dihapus. Sistem mencari transaksi berdasarkan ID tersebut.
+   Jika transaksi ditemukan, data akan dihapus dari `ArrayList`. Jika ID tidak ditemukan, sistem akan menampilkan pesan bahwa data tidak             ditemukan.
+
+   <img width="247" height="296" alt="Screenshot 2026-10-07 101218" src="https://github.com/user-attachments/assets/273fbe8b-a517-4911-a31c-38b33e2af678" />
+
+5. Proses Pencucian
+
+   Pada menu **Proses Pencucian**, pengguna memasukkan ID transaksi yang akan diproses. Sistem kemudian menampilkan data pencucian dari transaksi    tersebut, seperti informasi kendaraan, layanan, dan harga. Setelah pengguna mengonfirmasi proses pencucian, sistem menampilkan bahwa kendaraan    sedang dicuci dan memberikan informasi bahwa proses sedang berlangsung hingga akhirnya menampilkan pesan “Pencucian Selesai”.
+
+   <img width="311" height="522" alt="Screenshot 2026-10-07 101507" src="https://github.com/user-attachments/assets/85808da0-3b00-4663-b919-ce798cf36384" />
+
+6. Keluar Dari Program
+
+   Setelah setiap proses selesai, program kembali menampilkan menu utama sehingga pengguna dapat memilih proses lainnya. Program akan terus
+   berjalan selama pengguna belum memilih menu **Keluar**. Ketika pengguna memilih menu keluar, program akan menampilkan pesan bahwa program
+   selesai dan menghentikan proses.
+
+   <img width="517" height="306" alt="Screenshot 2026-10-07 101739" src="https://github.com/user-attachments/assets/7e4732fd-4b69-467c-a25d-da89df582a13" />
+
+# Penerapan Encapsulation
+
+penerapan encapsulation terdapat pada class Pelanggan, yaitu dengan menggunakan access modifier private pada atribut nama dan noTelepon, kemudian menyediakan method getter dan setter untuk mengakses dan mengubah nilai atribut tersebut.
+
+<img width="306" height="58" alt="Screenshot 2026-10-07 102305" src="https://github.com/user-attachments/assets/73cbf6c9-c8bf-490b-b435-9fc686896415" />
+
+<img width="411" height="301" alt="Screenshot 2026-10-07 102323" src="https://github.com/user-attachments/assets/f22e24ae-f47e-4f8a-b7b2-5bd4e5d008b7" />
+
+# Penerapan Inheritance
+
+Penerapan inheritance terdapat pada class Mobil dan Motor yang mewarisi class Kendaraan menggunakan keyword extends. Dengan inheritance, atribut dan method yang terdapat pada class Kendaraan dapat digunakan oleh class turunannya.
+
+<img width="766" height="147" alt="Screenshot 2026-10-07 102520" src="https://github.com/user-attachments/assets/c56fd611-1ca2-4d42-9a40-147575bca1f3" />
+
+<img width="719" height="147" alt="Screenshot 2026-10-07 102530" src="https://github.com/user-attachments/assets/06827478-2de0-48b7-9468-8cfcf8660661" />
+
+# Penerapan Polymorphism
+
+Penerapan polymorphism terdapat pada method tampilkanData() yang dioverride oleh class Mobil dan Motor. Method yang sama dapat menghasilkan tampilan data yang berbeda sesuai dengan jenis objek kendaraan yang digunakan.
+
+<img width="388" height="90" alt="Screenshot 2026-10-07 102947" src="https://github.com/user-attachments/assets/fd6f3997-5b18-4ed2-8c22-8674447b0b8f" />
+
+<img width="593" height="182" alt="Screenshot 2026-10-07 103022" src="https://github.com/user-attachments/assets/a278f2fb-6259-4ee9-82ad-743c0f6b51af" />
+
+<img width="613" height="204" alt="Screenshot 2026-10-07 103032" src="https://github.com/user-attachments/assets/fecc5122-927d-49a1-a25a-37dcf1cf38fc" />
+
+# Penerapan abstraction
+
+Abstraction diterapkan melalui class Kendaraan yang menyediakan atribut dan method umum seperti tampilkanData() untuk kendaraan. Detail penampilan data kemudian disesuaikan pada class turunan seperti Mobil dan Motor.
+
+<img width="348" height="113" alt="Screenshot 2026-10-07 103453" src="https://github.com/user-attachments/assets/a8174b1d-bb76-4322-8062-6fcf6aa6d5ce" />
+
+<img width="346" height="16" alt="Screenshot 2026-10-07 103501" src="https://github.com/user-attachments/assets/2857cbb5-1fb5-4bf9-ad1d-fca79ff87e25" />
+
+# Penerapan Nilai Tambah - Interface
+
+Interface BisaDicuci diterapkan sebagai bentuk abstraction yang mendefinisikan kemampuan atau method yang harus dimiliki oleh objek yang dapat dicuci. Interface hanya menentukan method yang harus tersedia, sedangkan implementasi prosesnya dilakukan oleh class yang menggunakan interface tersebut, seperti Mobil atau Motor.
+
+<img width="258" height="68" alt="Screenshot 2026-10-07 103728" src="https://github.com/user-attachments/assets/36fb26aa-5345-4c86-b593-bbd3a1a19b1b" />
+
+<img width="389" height="71" alt="Screenshot 2026-10-07 103854" src="https://github.com/user-attachments/assets/5deab481-4f68-40eb-baed-3121f889cc18" />
